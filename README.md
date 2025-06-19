@@ -7,4 +7,4 @@ A portfolio website showcasing my interests, skills, projects, and contact infor
 * CSS
 
 ## Live Website
-(https://cyuulater.github.io/Portfolio-Website/)
+https://cyuulater.github.io/Portfolio-Website/
