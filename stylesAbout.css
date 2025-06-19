@@ -1,0 +1,80 @@
+html {
+    font-family: 'Proxima Nova', sans-serif; 
+    width: 80%;
+    color: #333333;
+    margin: auto;
+} 
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 7px solid #5A81B3;
+}
+
+a {
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    color: #333333;
+    padding: 10px;
+}
+
+a:hover, a.active {
+    color: #5A81B3; 
+}
+
+.line-horizontal {
+    height: 2px;
+    flex: 1;
+    max-width: 200px;
+}
+
+.portrait-text-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px 0;
+}
+
+.portrait-text-container img {
+    width: 300px;
+    height: 350px;
+    margin: 0;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.mainContent{
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+}
+
+p {
+    font-size: 17px;
+    max-width: 100%;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.site-footer {
+    border-top: 7px solid #5A81B3;
+    text-align: center; /* Centers the text */
+    padding: 10px 0; /* Adds vertical padding */
+    font-size: 12px; /* Adjust font size as needed */
+}

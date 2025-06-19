@@ -1,0 +1,145 @@
+html {
+    font-family: 'Proxima Nova', sans-serif; 
+    width: 80%;
+    color: #333333;
+    margin: auto;
+} 
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 7px solid #5A81B3;
+}
+
+a {
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: none;
+    color: #333333;
+    padding: 10px;
+}
+
+a:hover, a.active {
+    color: #5A81B3; 
+}
+
+.line-horizontal {
+    height: 2px;
+    flex: 1;
+    max-width: 200px;
+}
+
+.text-content {
+    max-width: 100%;
+    text-align: left;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.mainContent{
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+}
+
+p {
+    font-size: 17px;
+    max-width: 100%;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+p a {
+    font-weight: normal;
+}
+
+.site-footer {
+    border-top: 7px solid #5A81B3;
+    text-align: center; 
+    padding: 10px 0; /* Adds vertical padding */
+    font-size: 12px; 
+}
+
+/* --- Project Item and Layout --- */
+.project-item {
+    margin-bottom: 30px; /* Space between different project blocks */
+    border-bottom: 1px solid #eee; /* Adds a separator line */
+    padding-bottom: 30px; /* Space above the line */
+}
+
+.project-date{
+    display: block;
+    font-size: 15px;
+    margin-top: 0;
+    color:#616161
+}
+
+/* Outer Flex Container: Image | (Text + Links Wrapper) */
+.project-content {
+    display: flex; /* Makes children (img and p) sit side-by-side */
+    gap: 30px;  /* Space between image and text */
+    align-items: flex-start; /* Aligns content to the top */
+}
+
+.project-image {
+    flex-shrink: 0;
+    width: 130px; /* Set a fixed width and height for a perfect circle */
+    height: 130px; /* Needs to be the same as width */
+    object-fit: cover; /* This is crucial to prevent distortion */
+    border-radius: 50%; /* This creates the circle shape */
+    border: 1px solid #ddd;
+}
+
+/* Exclude the border for the last item (ensure this is correct now) */
+.project-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Inner Flex Container: Text stacked over Links */
+.project-text-and-link-wrapper {
+    display: flex;
+    flex-direction: column; /* Stacks the paragraph and project-links div vertically */
+    justify-content: space-between; /* Pushes links to the bottom if description is short */
+    height: 100%; /* Ensures this container takes full height of its flex column */
+}
+
+/* Ensure paragraph inside the wrapper has correct spacing */
+.project-text-and-link-wrapper p {
+    margin-bottom: 20px; /* Space between description and links */
+    /* Preserve other 'p' styles like font-size, line-height etc. */
+}
+
+/* Project Links Container (for styling the link button itself) */
+.project-links {
+    /* No margin-left here anymore! It's stacked correctly by flex-direction: column */
+    margin-top: auto; /* This pushes the link div to the bottom if content is short */
+    text-align: left; /* Aligns link buttons to the left within their container */
+}
+
+.project-links a {
+    display: inline-block; /* Makes links behave like buttons, but inline */
+    margin-right: 15px; /* Space between multiple links if you have more than one */
+    padding: 10px 20px;
+    background-color: #5A81B3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    font-size: 16px; /* Specific font size for buttons */
+}
+
+.project-links a:hover {
+    background-color: #333333;
+}
