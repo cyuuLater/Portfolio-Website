@@ -134,7 +134,7 @@ p {
     }
 
     #tabs a {
-        padding: 4px; /* More vertical padding for clickable area */
+        padding: 4px; 
         text-align: center; /* Center each navigation link */
         width: 100%; /* Make each link take full width */
         font-size: 16px; /* Slightly smaller font size for tabs */
