@@ -143,3 +143,113 @@ p a {
 .project-links a:hover {
     background-color: #333333;
 }
+
+/* --- MOBILE/SMALLER SCREEN STYLES (Applies to Projects & Contact) --- */
+@media (max-width: 768px) {
+    /* --- GENERAL SITE STYLES FOR MOBILE --- */
+    html {
+        width: 100%; /* Allow full width on mobile */
+    }
+
+    body {
+        /* No border-bottom here if you want it cleaner on mobile, or move to a wrapper */
+    }
+
+    .mainContent {
+        width: 90%; /* Adjust overall content width for mobile */
+        padding: 10px;
+        margin: 20px auto; /* Adjust margin */
+    }
+
+    h1 {
+        font-size: 32px; /* Smaller h1 for mobile */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller h2 for mobile */
+    }
+
+    p {
+        font-size: 16px; /* Slightly smaller paragraphs for mobile */
+        line-height: 1.5;
+    }
+
+
+    /* --- HEADER / TOP SECTION SPECIFIC FOR MOBILE --- */
+    #top {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align all items to the left */
+        padding: 15px; /* More padding for mobile header */
+        gap: 10px; /* Space between stacked items (name and nav) */
+        max-width: 100%; /* Allow #top to take full width */
+        margin: 0 auto; /* Remove horizontal margin from previous auto setting */
+    }
+
+    #top h1 {
+        width: 100%; /* Take full width */
+        text-align: center; /* Center name on mobile */
+        margin-bottom: 10px; /* Add space below name */
+    }
+
+    #tabs {
+        flex-direction: column; /* Stack navigation links vertically */
+        width: 100%; /* Make navigation take full width */
+        gap: 5px; /* Smaller gap between stacked nav items */
+        align-items: center; /* Center nav links within their column */
+    }
+
+    #tabs a {
+        padding: 8px 0; /* More vertical padding for clickable area */
+        text-align: center; /* Center each navigation link */
+        width: 100%; /* Make each link take full width */
+        border-bottom: 1px solid rgba(0,0,0,0.05); /* Optional: subtle separator between links */
+        font-size: 16px; /* Slightly smaller font size for tabs */
+    }
+    #tabs a:last-child {
+        border-bottom: none; /* No border on the last nav item */
+    }
+
+    /* Adjust the icon size specifically for mobile */
+    /* Target by specific class if you add one to your GitHub/LinkedIn icons like .nav-icon */
+    #tabs a[style*="font-size: 23px"] { /* Targeting by inline style is less ideal, but works if no class */
+        font-size: 20px !important; /* Smaller icons on mobile */
+        margin-top: 10px; /* Add space above icons if they end up on a new line */
+    }
+
+
+    /* --- PROJECTS PAGE SPECIFIC CONTENT LAYOUT --- */
+    .project-content { /* Outer Flex Container for image and text+links wrapper */
+        flex-direction: column; /* Stack image and text/links wrapper vertically */
+        align-items: center; /* Center image and text block */
+        gap: 15px;
+    }
+    .project-image-link { /* Ensure link still wraps image correctly */
+        display: block;
+    }
+    .project-image {
+        width: 100px; /* Smaller image on mobile */
+        height: 100px;
+        margin: 0 auto; /* Center image */
+    }
+
+    /* Text & Links Wrapper for Projects */
+    .project-text-and-link-wrapper {
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text visually */
+    }
+    .project-text-and-link-wrapper p { /* Keep paragraph text left-aligned for readability */
+        text-align: left;
+        padding: 0 10px; /* Add some horizontal padding to prevent text touching edges */
+    }
+
+    /* Project Buttons/Links */
+    .project-links {
+        text-align: center; /* Center the buttons */
+    }
+    .project-links a {
+        display: block; /* Make buttons stack vertically */
+        width: 80%; /* Or max-width */
+        margin: 0 auto 10px auto; /* Center buttons with vertical margin */
+        padding: 12px 15px;
+    }
+}

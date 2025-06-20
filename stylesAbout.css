@@ -78,3 +78,105 @@ p {
     padding: 10px 0; /* Adds vertical padding */
     font-size: 12px; /* Adjust font size as needed */
 }
+
+/* --- Mobile/Smaller Screen Styles (Using a Media Query) --- */
+@media (max-width: 768px) {
+    /* --- GENERAL SITE STYLES FOR MOBILE --- */
+    html {
+        width: 100%; /* Allow full width on mobile */
+    }
+
+    body {
+        /* No border-bottom here if you want it cleaner on mobile, or move to a wrapper */
+    }
+
+    .mainContent {
+        width: 90%; /* Adjust overall content width for mobile */
+        padding: 10px;
+        margin: 20px auto; /* Adjust margin */
+    }
+
+    h1 {
+        font-size: 32px; /* Smaller h1 for mobile */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller h2 for mobile */
+    }
+
+    p {
+        font-size: 16px; /* Slightly smaller paragraphs for mobile */
+        line-height: 1.5;
+    }
+
+
+    /* --- HEADER / TOP SECTION SPECIFIC FOR MOBILE --- */
+    #top {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align all items to the left */
+        padding: 15px; /* More padding for mobile header */
+        gap: 10px; /* Space between stacked items (name and nav) */
+        max-width: 100%; /* Allow #top to take full width */
+        margin: 0 auto; /* Remove horizontal margin from previous auto setting */
+    }
+
+    #top h1 {
+        width: 100%; /* Take full width */
+        text-align: center; /* Center name on mobile */
+        margin-bottom: 10px; /* Add space below name */
+    }
+
+    #tabs {
+        flex-direction: column; /* Stack navigation links vertically */
+        width: 100%; /* Make navigation take full width */
+        gap: 5px; /* Smaller gap between stacked nav items */
+        align-items: center; /* Center nav links within their column */
+    }
+
+    #tabs a {
+        padding: 8px 0; /* More vertical padding for clickable area */
+        text-align: center; /* Center each navigation link */
+        width: 100%; /* Make each link take full width */
+        border-bottom: 1px solid rgba(0,0,0,0.05); /* Optional: subtle separator between links */
+        font-size: 16px; /* Slightly smaller font size for tabs */
+    }
+    #tabs a:last-child {
+        border-bottom: none; /* No border on the last nav item */
+    }
+
+    /* Adjust the icon size specifically for mobile */
+    #tabs a[style*="font-size: 23px"] { /* Targeting by inline style, consider giving them a class like .nav-icon */
+        font-size: 20px !important; /* Smaller icons on mobile */
+        margin-top: 10px; /* Add space above icons if they end up on a new line */
+        /* To center them if they are alone, you might need display:block and text-align:center on their parent */
+    }
+
+
+    /* --- ABOUT PAGE SPECIFIC CONTENT LAYOUT --- */
+    .portrait-text-container {
+        flex-direction: column; /* Stack portrait and text vertically */
+        align-items: center; /* Center items horizontally when stacked */
+        gap: 20px; /* Reduce gap for mobile */
+        padding: 10px 0;
+    }
+
+    .portrait-text-container img {
+        width: 200px; /* Smaller image on mobile */
+        height: 250px; /* Adjust height proportionally */
+        object-fit: cover; /* Ensure image isn't distorted */
+        border-radius: 5px; /* Optional: subtle border-radius if not circular */
+    }
+
+    .text-content {
+        max-width: 90%; /* Allow text to take most of the width */
+        text-align: left; /* Keep text left-aligned for readability */
+        padding: 0 10px; /* Add some horizontal padding to prevent text touching edges */
+    }
+
+
+    /* --- FOOTER --- */
+    .site-footer {
+        font-size: 10px; /* Smaller footer text on mobile */
+        padding: 15px 0;
+    }
+}
