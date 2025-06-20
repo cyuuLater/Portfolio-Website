@@ -130,25 +130,20 @@ p {
         flex-direction: column; /* Stack navigation links vertically */
         width: 100%; /* Make navigation take full width */
         gap: 5px; /* Smaller gap between stacked nav items */
-        align-items: center; /* Center nav links within their column */
+        text-align: center;
     }
 
     #tabs a {
-        padding: 8px 0; /* More vertical padding for clickable area */
+        padding: 4px; /* More vertical padding for clickable area */
         text-align: center; /* Center each navigation link */
         width: 100%; /* Make each link take full width */
-        border-bottom: 1px solid rgba(0,0,0,0.05); /* Optional: subtle separator between links */
         font-size: 16px; /* Slightly smaller font size for tabs */
-    }
-    #tabs a:last-child {
-        border-bottom: none; /* No border on the last nav item */
     }
 
     /* Adjust the icon size specifically for mobile */
     #tabs a[style*="font-size: 23px"] { /* Targeting by inline style, consider giving them a class like .nav-icon */
         font-size: 20px !important; /* Smaller icons on mobile */
         margin-top: 10px; /* Add space above icons if they end up on a new line */
-        /* To center them if they are alone, you might need display:block and text-align:center on their parent */
     }
 
 
@@ -172,7 +167,6 @@ p {
         text-align: left; /* Keep text left-aligned for readability */
         padding: 0 10px; /* Add some horizontal padding to prevent text touching edges */
     }
-
 
     /* --- FOOTER --- */
     .site-footer {

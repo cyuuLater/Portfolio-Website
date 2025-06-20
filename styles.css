@@ -195,18 +195,14 @@ p a {
         flex-direction: column; /* Stack navigation links vertically */
         width: 100%; /* Make navigation take full width */
         gap: 5px; /* Smaller gap between stacked nav items */
-        align-items: center; /* Center nav links within their column */
+        text-align: center;
     }
 
     #tabs a {
         padding: 8px 0; /* More vertical padding for clickable area */
         text-align: center; /* Center each navigation link */
         width: 100%; /* Make each link take full width */
-        border-bottom: 1px solid rgba(0,0,0,0.05); /* Optional: subtle separator between links */
         font-size: 16px; /* Slightly smaller font size for tabs */
-    }
-    #tabs a:last-child {
-        border-bottom: none; /* No border on the last nav item */
     }
 
     /* Adjust the icon size specifically for mobile */
